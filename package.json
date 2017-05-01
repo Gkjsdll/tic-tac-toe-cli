@@ -11,6 +11,7 @@
     "mocha": "^3.3.0"
   },
   "scripts": {
-    "start": "node game.js"
+    "start": "node game.js",
+    "test": "mocha --recursive ./test"
   }
 }
