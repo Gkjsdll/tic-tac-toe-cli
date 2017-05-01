@@ -16,10 +16,10 @@ module.exports.logic = logic = {
     })
   },
   takeTurn(row, col) {
-    if (board[row][col]) {
+    if (gameState.board[row][col]) {
       console.log('There is already a piece here');
     } else {
-      board[row][col] = gameState.XTurn ? 'X' : 'O';
+      gameState.board[row][col] = gameState.XTurn ? 'X' : 'O';
       gameState.XTurn = !gameState.XTurn;
       this.checkBoard();
     }
@@ -39,7 +39,9 @@ module.exports.logic = logic = {
     this.render();
   }
 };
-module.exports.play = logic.play.bind(logic);
+Object.keys(logic).forEach(function(key) {
+  logic[key] = logic[key].bind(logic);
+});
 
 module.exports.render = render = function() {
   const renderString = gameState.board.map(function(row) {
