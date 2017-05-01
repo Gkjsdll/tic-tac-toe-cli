@@ -1,0 +1,13 @@
+{
+  "name": "tic-tac-toe",
+  "version": "0.0.1",
+  "main": "game.js",
+  "repository": "git@github.com:Gkjsdll/tic-tac-toe-cli.git",
+  "author": "Zack Winchell <zackwinchell@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "chalk": "^1.1.3",
+    "mocha": "^3.3.0"
+  }
+}
